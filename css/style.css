@@ -35,6 +35,10 @@
   --padding-md: 1rem;
   --margin: 1rem;
   --border-radius: .2rem;
+
+  --font-size-input: .9rem;
+  --font-size-menu: .9rem;
+  --spacing-section: 3rem;
 }
 
 *,
@@ -71,6 +75,10 @@ a{
   color: var(--dark-blue);
 }
 
+  a:hover{
+    opacity: .6;
+  }
+
 form{
   width: 100%;
   display: flex;
@@ -82,10 +90,11 @@ input{
   padding: .7rem .5rem;
   border: 1px solid var(--desaturated-blue);
   border-radius: var(--border-radius);
+  width: 100%;
 
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
-  font-size: calc(var(--font-size) * .9);
+  font-size: var(--font-size-input);
   font-family: var(--font-family-g);
 }
 
@@ -115,7 +124,7 @@ h1, h2{
 }
 
 .cta-button{
-  padding: .8rem 2.3rem;
+  padding: .66rem 2.3rem;
   border: 1px solid var(--bright-blue);
   border-radius: var(--border-radius);
   background-color: var(--bright-blue);
@@ -146,7 +155,7 @@ h1, h2{
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
-  padding: calc(var(--padding) * 2) var(--padding);
+  padding: var(--spacing-section) var(--padding);
 }
 
   .main-header{
@@ -161,7 +170,7 @@ h1, h2{
       list-style: none;
       display: flex;
       gap: 1.5rem;
-      font-size: calc(var(--font-size) * .9);
+      font-size: var(--font-size-menu);
     }
 
     .main-header .logo{
@@ -246,7 +255,6 @@ h1, h2{
     }
 
     .suscription-text{
-      width: 80%;
       text-align: center;
     }
 
@@ -305,7 +313,7 @@ h1, h2{
 .card{
   width: 90%;
   padding: var(--padding);
-  margin: calc(var(--margin) * 2) auto var(--margin);
+  margin: 2rem auto var(--margin);
 
   background-color: var(--white);
   border-radius: var(--border-radius);
@@ -368,17 +376,21 @@ h1, h2{
 }
 
 
-.hero-form-container{
+.hero-form-container, 
+.suscription-form{
   display: flex;
   gap: 1rem;
   flex-direction: column;
   align-items: center;
-  margin-bottom: calc(var(--margin) * 2);
 }
 
-  .hero-form-container > input{
-    width: 80%;
-  }
+.hero-form-container{
+  margin-bottom: 1.7rem
+}
+
+.input-container{
+  width: 80%;
+}
 
 
 .bg-wave{
@@ -405,10 +417,8 @@ h1, h2{
   color: var(--red);
   display: none;
   text-align: left;
-  width: 80%;
   font-size: calc(100% * .8);
   font-family: var(--font-family-g);
-  margin-top: calc(var(--margin) * (-1));
 }
 
   input:not(:placeholder-shown):invalid{
@@ -496,11 +506,11 @@ h1, h2{
   }
 
 @media screen and (min-width: 558px){
-  .hero-form-container > input{
+  .hero-form-container > .input-container{
     width: 70%;
   }
 
-  .suscription-form > input{
+  .suscription-form > .input-container{
     width: 70%;
     margin: 0 0 var(--margin);
   }
@@ -509,12 +519,12 @@ h1, h2{
     width: 70%;
   }
 
-  .form-error{
-    width: 70%;
-  }
-
   ul.main-menu{
     gap: 3rem;
+  }
+
+  .suscription-text{
+    width: 80%;
   }
 }
 
@@ -614,7 +624,12 @@ h1, h2{
     text-align: left;
   }
 
-  .suscription-form > input{
+  .hero-form-container,
+  .suscription-form{
+    align-items: flex-start;
+  }
+
+  .suscription-form > .input-container{
     width: 100%;
   }
 
@@ -641,9 +656,10 @@ h1, h2{
       flex-direction: row;
       justify-content: space-between;
       max-width: 90%;
+      align-items: start;
     }
 
-    .hero-form-container > input{
+    .hero-form-container > .input-container{
       flex-grow: 2;
       width: 100%;
     }
@@ -663,7 +679,7 @@ h1, h2{
   .cta-container{
     display: grid;
     grid-template-columns: 4fr 3fr;
-    padding-top: calc(var(--padding) * 2);
+    padding-top: 1.7rem;
   }
 
   .cta-text-container{
