@@ -25,11 +25,11 @@
   --font-family-b: 'Open Sans', sans-serif;
   --font-family-g: 'Raleway', sans-serif;
   
-  --font-size: 12px;
-  --line-height: 22px;
+  --font-size: 14px;
+  --line-height: 24px;
 
-  --font-size-md: 18px;
-  --line-height-md: 24px;
+  --font-size-md: 16px;
+  --line-height-md: 28px;
 
   --padding: 2rem;
   --padding-md: 1rem;
@@ -220,8 +220,8 @@ h1, h2{
     }
   
     .cta-container h2.title{
-      font-size: 1.2rem;
-      line-height: 1.6rem;
+      font-size: 1.3rem;
+      line-height: 1.8rem;
       text-align: center;
     }
 
@@ -351,12 +351,12 @@ h1, h2{
 }
 
 .title{
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
 }
 
 .quote{
-  font-size: .7rem;
+  font-size: .8rem;
   line-height: 1.4rem;
   letter-spacing: 1px;
   font-family: var(--font-family-g);
@@ -512,6 +512,10 @@ h1, h2{
   .form-error{
     width: 70%;
   }
+
+  ul.main-menu{
+    gap: 3rem;
+  }
 }
 
 @media screen and (min-width: 998px) {
@@ -525,15 +529,97 @@ h1, h2{
   ul.social-icons > li{
     margin-bottom: var(--margin);
   }
+  
+  ul.main-menu{
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+  }
 
-  .title{
+  form{
+    align-items: start;
+  }
+
+  .title,
+  .suscription-title,
+  .cta-container h2.title{
     text-align: left;
+  }
+
+  .quote{
+    font-size: .9rem;
+    line-height: 1.4rem;
+  }
+
+  span.user-name{
+    font-size: .9rem;
+    line-height: 1rem;
+  }
+
+  small.user-description {
+    font-size: .8rem;
+    line-height: 1.5rem;
+  }
+  
+  .suscription-title{
     font-size: 2rem;
     line-height: 2.5rem;
   }
 
+  .cta-container h2.title{
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .title{
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  .cta-button{
+    width: auto;
+    min-width: 16rem;
+  }
+
+  .main-header .logo{
+    width: 10rem;
+    margin-bottom: 0;
+  }
+
+  .social-icons{
+    justify-content: initial;
+  }
+
+  .card{
+    max-width: 60%;
+    margin: calc(var(--margin) * 2) 0 var(--margin);
+  }
+
+    .card-footer{
+      padding-top: 1.5rem;
+    }
+
+  .bg-wave{
+    background-image: url("../images/bg-curve-desktop.svg");
+    padding-top: 5%;
+  }
+
+  .suscription-container{
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .suscription-text{
+    text-align: left;
+  }
+
+  .suscription-form > input{
+    width: 100%;
+  }
+
   .main-container{
-    padding: calc(var(--padding) * 5) var(--padding);
+    padding: calc(var(--padding) * 4) var(--padding);
   }
 
   .main-footer > .main-container{
@@ -541,7 +627,8 @@ h1, h2{
   }
 
   .main-header{
-    padding: var(--padding) 0;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
   }
 
   .hero-container{
@@ -561,44 +648,6 @@ h1, h2{
       width: 100%;
     }
 
-  .cta-container{
-    display: grid;
-    grid-template-columns: 4fr 3fr;
-  }
-
-  .logo{
-    height: 3rem;
-  }
-
-  .bg-wave{
-    background-image: url("../images/bg-curve-desktop.svg");
-    background-size: cover;
-  }
-
-  .suscription-container{
-    display: grid;
-    grid-template-columns: 4fr 3fr;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .suscription-text{
-    text-align: left;
-  }
-
-  .suscription-form > input{
-    width: 100%;
-  }
-
-  .cta-button{
-    width: auto;
-  }
-
-  .logo{
-    width: 10rem;
-    margin-bottom: 0;
-  }
-
   .main-footer > .main-container{
     display: grid;
     grid-template-columns: 2fr  repeat(3, 1fr);
@@ -607,12 +656,17 @@ h1, h2{
       "info about contact social";
   }
 
-  .social-icons{
-    justify-content: initial;
+  .footer-info{
+    margin-top: inherit;
   }
 
-  .card{
-    max-width: 60%;
-    margin: calc(var(--margin) * 2) 0 var(--margin);
+  .cta-container{
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    padding-top: calc(var(--padding) * 2);
+  }
+
+  .cta-text-container{
+    text-align: left;
   }
 }
