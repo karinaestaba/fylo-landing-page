@@ -1,40 +1,28 @@
-@font-face 
-  font-family: 'fontello'
-  src: url('../font/fontello.eot?63210088')
-  src: url('../font/fontello.eot?63210088#iefix') format('embedded-opentype'),url('../font/fontello.woff?63210088') format('woff'), url('../font/fontello.ttf?63210088') format('truetype'), url('../font/fontello.svg?63210088#fontello') format('svg')
-  font-weight: normal
-  font-style: normal
 
-\:root
-  --dark-blue: hsl(243, 87%, 12%)
-  --dark-blue-opacity: hsl(243, 9%, 41%)
-  --desaturated-blue: hsl(238, 22%, 44%)
-  --bright-blue: hsl(224, 93%, 58%)
-  --hot-blue: hsl(221, 100%, 71%)
-  --moderate-cyan: hsl(170, 45%, 43%)
-  --hot-cyan: hsl(169, 67%, 69%)
-  --light-grayish-blue: #f8f8fe
-  --light-gray: hsl(0, 0%, 75%)
-  --white: #fff
-  --red: hsl(341, 52%, 71%)
-
-  --font-family-b: 'Open Sans', sans-serif
-  --font-family-g: 'Raleway', sans-serif
-  
-  --font-size: 14px
-  --line-height: 24px
-
-  --font-size-md: 16px
-  --line-height-md: 28px
-
-  --padding: 2rem
-  --padding-md: 1rem
-  --margin: 1rem
-  --border-radius: .2rem
-
-  --font-size-input: .9rem
-  --font-size-menu: .9rem
-  --spacing-section: 3rem
+$dark-blue: hsl(243, 87%, 12%)
+$dark-blue-opacity: hsl(243, 9%, 41%)
+$desaturated-blue: hsl(238, 22%, 44%)
+$bright-blue: hsl(224, 93%, 58%)
+$hot-blue: hsl(221, 100%, 71%)
+$moderate-cyan: hsl(170, 45%, 43%)
+$hot-cyan: hsl(169, 67%, 69%)
+$light-grayish-blue: #f8f8fe
+$light-gray: hsl(0, 0%, 75%)
+$white: #fff
+$red: hsl(341, 52%, 71%)
+$font-family-b: 'Open Sans', sans-serif
+$font-family-g: 'Raleway', sans-serif  
+$font-size: 14px
+$line-height: 24px
+$font-size-md: 16px
+$line-height-md: 28px
+$padding: 2rem
+$padding-md: 1rem
+$margin: 1rem
+$border-radius: .2rem
+$font-size-input: .9rem
+$font-size-menu: .9rem
+$spacing-section: 3rem
 
 *,
 *::after,
@@ -47,22 +35,22 @@ body,
 html
   height: 100%
   min-height: 100vh
-  font-family: var(--font-family-b)
-  font-size: var(--font-size)
-  line-height: var(--line-height)
+  font-family: $font-family-b
+  font-size: $font-size
+  line-height: $line-height
   font-weight: 400
   font-style: normal
-  background-color: var(--white)
-  color: var(--dark-blue-opacity)
+  background-color: $white
+  color: $dark-blue-opacity
 
 button,
 header,
 .title
-  font-family: var(--font-family-g)
+  font-family: $font-family-g
 
 a
   text-decoration: none
-  color: var(--dark-blue)
+  color: $dark-blue
 
   &:hover
     opacity: .6
@@ -75,34 +63,34 @@ form
 
 input
   padding: .7rem .5rem
-  border: 1px solid var(--desaturated-blue)
-  border-radius: var(--border-radius)
+  border: 1px solid $desaturated-blue
+  border-radius: $border-radius
   width: 100%
 
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px
-  font-size: var(--font-size-input)
-  font-family: var(--font-family-g)
+  font-size: $font-size-input
+  font-family: $font-family-g
 
   &::placeholder
-    color: var(--light-gray)
+    color: $light-gray
   
   &:focus,
   &:focus-visible
     outline: none
     outline-style: none
-    border: 1px solid var(--bright-blue)
+    border: 1px solid $bright-blue
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px
 
   &:not(:placeholder-shown)
     &:invalid
-      border: 1px solid var(--red)
+      border: 1px solid $red
 
       + .form-error
         display: block
 
 ul.contact-info,
 ul.menu-links,
-ul.social-icons,
+ul.social-icons
   list-style: none
 
 ul
@@ -111,21 +99,21 @@ ul
       list-style: none
       display: flex
       gap: 1.5rem
-      font-size: var(--font-size-menu)
+      font-size: $font-size-menu
 
 h1,
 h2
-  color: var(--dark-blue)
-  font-family: var(--font-family-g)
+  color: $dark-blue
+  font-family: $font-family-g
   font-weight: 700
 
 .cta-button
   padding: .66rem 2.3rem
-  border: 1px solid var(--bright-blue)
-  border-radius: var(--border-radius)
-  background-color: var(--bright-blue)
+  border: 1px solid $bright-blue
+  border-radius: $border-radius
+  background-color: $bright-blue
 
-  color: var(--white)
+  color: $white
   font-weight: 700
   min-width: 10rem
   width: 80%
@@ -135,8 +123,8 @@ h2
   transition: all .5s
 
   &:hover
-    background-color: var(--hot-blue)
-    border-color: var(--hot-blue)
+    background-color: $hot-blue
+    border-color: $hot-blue
     transition: all .5s
   
   &:active,
@@ -148,21 +136,21 @@ h2
     max-width: 1200px
     height: 100%
     margin: 0 auto
-    padding: var(--spacing-section) var(--padding)
+    padding: $spacing-section $padding
 
   &-header
     display: flex
     gap: 1rem
     justify-content: space-between
     align-items: center
-    padding: var(--padding)
+    padding: $padding
 
     .logo
       width: 5rem
 
   &-footer
-    background-color: var(--dark-blue)
-    color: var(--white)
+    background-color: $dark-blue
+    color: $white
   
     > .main-container
       display: flex
@@ -172,11 +160,11 @@ h2
     .logo
       grid-area: logo
       filter: brightness(0) invert(1)
-      margin-bottom: calc(var(--margin) * 1.5)
+      margin-bottom: calc($margin * 1.5)
       width: 12rem
 
     a
-      color: var(--white)
+      color: $white
 
 .hero-container
   display: flex
@@ -191,11 +179,11 @@ h2
     flex-direction: column-reverse
     gap: 2rem
     align-items: center
-    background-color: var(--light-grayish-blue)
+    background-color: $light-grayish-blue
 
     .image-hero 
       > img
-        background-color: var(--light-grayish-blue)
+        background-color: $light-grayish-blue
     
     h2
       &.title
@@ -209,14 +197,14 @@ h2
 
   &-text-container
     text-align: center
-    padding-top: calc(var(--padding) * 1.5)
+    padding-top: calc($padding * 1.5)
 
   &-link
     display: inline-block
     padding-bottom: .3rem
-    margin-bottom: var(--margin)
-    color: var(--moderate-cyan)
-    border-bottom: 1px solid var(--moderate-cyan)
+    margin-bottom: $margin
+    color: $moderate-cyan
+    border-bottom: 1px solid $moderate-cyan
 
     &:hover
       filter: invert(16%) sepia(99%) saturate(252%) hue-rotate(121deg) brightness(98%)
@@ -241,8 +229,8 @@ h2
   &-title
     font-size: 1.2rem
     line-height: 1.6rem
-    margin-bottom: var(--margin)
-    color: var(--light-grayish-blue)
+    margin-bottom: $margin
+    color: $light-grayish-blue
 
   &-text
     text-align: center
@@ -251,17 +239,17 @@ h2
     > input
       display: block
       width: 80%
-      margin: 0 auto var(--margin)
+      margin: 0 auto $margin
 
     .form-error
-      color: var(--light-grayish-blue)
-      margin-bottom: var(--margin)
+      color: $light-grayish-blue
+      margin-bottom: $margin
       opacity: .7
     
 .footer
   &-info
     grid-area: info
-    margin-top: calc(var(--margin) * (-2.5))
+    margin-top: calc($margin * (-2.5))
 
   &-about
     grid-area: about
@@ -274,10 +262,10 @@ h2
 
 .card
   width: 90%
-  padding: var(--padding)
-  margin: 2rem auto var(--margin)
-  background-color: var(--white)
-  border-radius: var(--border-radius)
+  padding: $padding
+  margin: 2rem auto $margin
+  background-color: $white
+  border-radius: $border-radius
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
   text-align: left
 
@@ -303,7 +291,7 @@ span
     display: block
     font-size: .8rem
     line-height: 1rem
-    color: var(--dark-blue)
+    color: $dark-blue
     
 small
   &.user-description
@@ -323,11 +311,11 @@ small
   font-size: .8rem
   line-height: 1.4rem
   letter-spacing: 1px
-  font-family: var(--font-family-g)
-  color: var(--dark-blue)
+  font-family: $font-family-g
+  color: $dark-blue
 
 .description
-  padding: var(--padding) 0
+  padding: $padding 0
 
 .hero-form-container,
 .suscription-form
@@ -344,27 +332,27 @@ small
 
 .bg-wave
   padding-top: 10%
-  background-color: var(--white)
+  background-color: $white
   background-image: url("../images/bg-curve-mobile.svg")
   background-position: top
   background-repeat: no-repeat
   background-size: contain
 
   > .section-light
-    background-color: var(--light-grayish-blue)
+    background-color: $light-grayish-blue
 
 .section-dark
-  background-color: var(--desaturated-blue)
-  color: var(--white)
+  background-color: $desaturated-blue
+  color: $white
 
 /** Validation **/
 
 .form-error
-  color: var(--red)
+  color: $red
   display: none
   text-align: left
   font-size: calc(100% * .8)
-  font-family: var(--font-family-g)
+  font-family: $font-family-g
 
 /** Icons **/
 
@@ -385,15 +373,15 @@ small
     padding: .5rem
     margin: .5rem
 
-    border: 1px solid var(--white)
+    border: 1px solid $white
     border-radius: 50%
     text-decoration: none
-    color: var(--white)
+    color: $white
     transition: all 1s
   
     &:hover
-      color: var(--hot-blue)
-      border-color: var(--hot-blue)
+      color: $hot-blue
+      border-color: $hot-blue
       transition: all 1s
 
     > img
@@ -423,6 +411,19 @@ small
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+.credits
+  font-size: 10px
+  color: darken($light-gray, 10)
+  margin: 0
+  text-align: center
+  padding-bottom: 20px
+
+  a
+    color: lighten($light-gray,10)
+
+    &:hover
+      transition: all 0.3s ease-in-out
+
 @media screen and (min-width: 558px)
   .hero-form-container
     > .input-container
@@ -431,7 +432,7 @@ small
   .suscription-form
     > .input-container
       width: 70%
-      margin: 0 0 var(--margin)
+      margin: 0 0 $margin
 
   .cta-button
     width: 70%  
@@ -445,18 +446,18 @@ small
 
 @media screen and (min-width: 998px) 
   body
-    font-size: var(--font-size-md)
-    line-height: var(--line-height-md)
+    font-size: $font-size-md
+    line-height: $line-height-md
 
   ul.contact-info > li,
   ul.menu-links > li,
   ul.social-icons > li
-    margin-bottom: var(--margin)
+    margin-bottom: $margin
 
   ul
     &.main-menu
-      font-size: var(--font-size-md)
-      line-height: var(--line-height-md)
+      font-size: $font-size-md
+      line-height: $line-height-md
 
   form
     align-items: start
@@ -491,7 +492,7 @@ small
 
   .card
     max-width: 60%
-    margin: calc(var(--margin) * 2) 0 var(--margin)
+    margin: calc($margin * 2) 0 $margin
 
     &-footer
       padding-top: 1.5rem
@@ -524,7 +525,7 @@ small
 
   .main
     &-container
-      padding: calc(var(--padding) * 3) var(--padding)
+      padding: calc($padding * 3) $padding
 
     &-footer 
       > .main-container
@@ -534,8 +535,8 @@ small
         grid-template-areas: "logo logo logo logo" "info about contact social"
   
     &-header 
-      padding-top: var(--padding)
-      padding-bottom: var(--padding)
+      padding-top: $padding
+      padding-bottom: $padding
 
       .logo
         width: 10rem
